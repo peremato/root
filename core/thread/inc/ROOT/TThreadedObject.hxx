@@ -219,6 +219,12 @@ namespace ROOT {
          return Get().get();
       }
 
+      T& GetRef()
+      {
+         return *Get().get();
+      }
+
+
       /// Merge all the thread private objects. Can be called once: it does not
       /// create any new object but destroys the present bookkeping collapsing
       /// all objects into the one at slot 0.
